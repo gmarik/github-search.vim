@@ -1,6 +1,6 @@
 ##About
 
-[github-search.vim] a [Vim] plugin letting search github with [Vim]
+[github-search.vim] is a [Vim] plugin to search github with [Vim]
 
 Also it lets you clone repo with single keypress
 

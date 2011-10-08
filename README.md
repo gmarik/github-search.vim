@@ -2,6 +2,8 @@
 
 [github-search.vim] is a [Vim] plugin to search [Github](http://github.com) with [Vim]
 
+![Github-search.vim](http://bit.ly/pCbGaq)
+
 Also it lets you clone repo with single keypress
 
 ## Requirements

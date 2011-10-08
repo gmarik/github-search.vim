@@ -8,14 +8,10 @@ here's the result of running `:GHSearchRepo ruby-kata`
 
 ## Installation
 
-If you're `Vundle` user run
+If you're [Vundle] user
 
-`BundleInstall gmarik/github-search.vim`
-
-also don't forget to add
-
-`Bundle 'gmarik/github-search.vim'` to your [Vundle] powered `.vimrc` if you like it
-
+1. run `:BundleInstall gmarik/github-search.vim` within [Vim]
+2. add `Bundle 'gmarik/github-search.vim'` to your [Vundle] powered `.vimrc` 
 
 ## Howto
 run in [Vim]

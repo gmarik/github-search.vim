@@ -6,8 +6,6 @@ here's the result of running `:GHSearch ruby-kata`
 
 ![Github-search.vim](https://lh3.googleusercontent.com/-GtFvhbkYQrg/TpDNt0e30pI/AAAAAAAAHT0/rGkpaxlCkD4/s875/gthub-search.vim.png)
 
-To clone repo to `~/src/github_user/github_repo` press `C `
-
 ## Installation
 
 If you're `Vundle` user run
@@ -23,6 +21,8 @@ also don't forget to add
 run in [Vim]
 
 `:GHSearchRepo somethin` to search for `somethin`
+
+Pressing `C` over selected repo will clone repo to `~/src/github_user/github_repo`
 
 ## Requirements
 

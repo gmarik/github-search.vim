@@ -75,7 +75,7 @@ func! GHquery(q)
     throw 'Error curl or wget is not available!'
   endif
 
-  exec '!'.cmd
+  silent exec '!'.cmd
 
   if (0 != v:shell_error)
     throw 'Error running cmd:$ '.cmd

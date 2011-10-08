@@ -14,16 +14,17 @@ func! GHcloneRepo(repo) abort
 endf
 
 func! GHSearchRepo(query) abort
-  call GHview(a:query, ['" Search: '.a:query, '" press C to clone'], map(GHfetch(a:query).repositories, 'GHformat(v:val)' ))
+  call GHview(a:query, ['" Gihub Search: '.a:query, '" press C to clone'], map(GHfetch(a:query).repositories, 'GHformat(v:val)' ))
 endf
 
 func! GHfetch(query) abort
-  let [true, false] = [1,0]
+  let [true, false, null] = [1,0,"''"]
   return eval(readfile(GHquery(a:query),'b')[0])
 endf
 
 func! GHformat(repo)
-  return printf("Repo '%s/%s' \" %s", a:repo.username, a:repo.name, a:repo.description)
+  let desc = has_key(a:repo, 'description') ? '  " '.a:repo.description : ''
+  return printf("Repo '%s/%s'%s", a:repo.username, a:repo.name, desc)
 endf
 
 func! GHview(title, headers, results)

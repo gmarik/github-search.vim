@@ -11,13 +11,11 @@ Also it lets you clone repo with single keypress
 
 ##TODO
 
-- integrate with [Vundle] to allow search for [Vim] [Plugins]
+- integrate with [Vundle] to allow search for [Vim plugins]
 
 [github-search.vim]:http://github.com/gmarik/github-search.vim
-[Git]:http://git-scm.com/
-[Curl]:http://curl.haxx.se/
 [Vim]:http://www.vim.org
 [Vundle]:http://github.com/gmarik/vundle
-[Plugins]:http://vim-scripts.org/vim/scripts.html
-[curl]:http://vim-scripts.org/vim/scripts.html
-[Git]:http://vim-scripts.org/vim/scripts.html
+[Vim plugins]:https://github.com/search?type=Repositories&language=VimL&q=vim
+[Git]:http://git-scm.com/
+[Curl]:http://curl.haxx.se/

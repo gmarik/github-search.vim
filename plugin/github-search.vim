@@ -44,7 +44,7 @@ func! GHview(title, headers, results)
   setl noswapfile
 
   setl cursorline
-  setl nonu ro noma ignorecase 
+  setl nonu ro noma ignorecase
 
   setl ft=vim
   setl syntax=vim
@@ -67,7 +67,7 @@ func! GHquery(q)
   elseif executable("wget")
     let temp = shellescape(tempname())
     let cmd = 'wget -q -O '.temp.' '.l:from. ' && mv -f '.temp.' '.shellescape(l:to)
-    if (has('win32') || has('win64')) 
+    if (has('win32') || has('win64'))
       let cmd = substitute(cmd, 'mv -f ', 'mv /Y ') " change force flag
       let cmd = '"'.cmd.'"'                         " enclose in quotes so && joined cmds work
     end
@@ -83,4 +83,3 @@ func! GHquery(q)
 
   return l:to
 endf
-

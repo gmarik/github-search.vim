@@ -14,7 +14,7 @@ func! GHcloneRepo(repo) abort
 endf
 
 func! GHSearchRepo(query) abort
-  call GHview(a:query, ['" Gihub Search: '.a:query, '" press C to clone'], map(GHfetch(a:query).repositories, 'GHformat(v:val)' ))
+  call GHview(a:query, ['" Github Search: '.a:query, '" press C to clone'], map(GHfetch(a:query).repositories, 'GHformat(v:val)' ))
 endf
 
 func! GHfetch(query) abort

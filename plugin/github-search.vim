@@ -56,6 +56,7 @@ func! GHview(title, headers, results)
   nnoremap <buffer> C :exec 'GHclone'.getline('.')<CR>
 
   exec ':'.(len(a:headers) + 1)
+  redraw!
 endf
 
 func! GHquery(q)

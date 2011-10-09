@@ -6,8 +6,18 @@
 
 com! -nargs=+         GHSearchRepo call GHSearchRepo(<q-args>)
 
+if !exists('g:github_search_path_format')
+  let g:github_search_path_format = '~/src/:author/:project'
+endif
+
 func! GHcloneRepo(repo) abort
-  let path = '~/src/'.a:repo
+  let [author, project] = split(a:repo, '/')
+
+  let path = g:github_search_path_format
+  let path = substitute(path, ':repo',    a:repo,  'g')
+  let path = substitute(path, ':author',  author,  'g')
+  let path = substitute(path, ':project', project, 'g')
+
   exec '!git clone http://github.com/'.a:repo.' '.path
   wincmd s
   exec ':Explore'.path

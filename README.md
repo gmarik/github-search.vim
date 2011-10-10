@@ -8,8 +8,8 @@ here's the result of running `:GHSearchRepo ruby-kata`
 
 ## Why
 
-A. It's faster than doing it with browser 1) search in browser 2) copy clone url 3) clone in terminal 4) open in Vim
-B. I prefer Vim to study sources, so I made it easier
+- A. It's faster than doing it with browser 1) search in browser 2) copy clone url 3) clone in terminal 4) open in Vim
+- B. I prefer Vim to study sources, so I made it easier
 
 ## Installation
 

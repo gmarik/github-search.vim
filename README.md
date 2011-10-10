@@ -6,6 +6,11 @@ here's the result of running `:GHSearchRepo ruby-kata`
 
 ![Github-search.vim](https://lh3.googleusercontent.com/-GtFvhbkYQrg/TpDNt0e30pI/AAAAAAAAHT0/rGkpaxlCkD4/s875/gthub-search.vim.png)
 
+## Why
+
+A. It's faster than doing it with browser 1) search in browser 2) copy clone url 3) clone in terminal 4) open in Vim
+B. I prefer Vim to study sources, so I made it easier
+
 ## Installation
 
 If you're [Vundle] user

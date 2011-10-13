@@ -16,14 +16,22 @@ here's the result of running `:GHSearchRepo ruby-kata`
 If you're [Vundle] user
 
 1. run `:BundleInstall gmarik/github-search.vim` within [Vim]
-2. add `Bundle 'gmarik/github-search.vim'` to your [Vundle] powered `.vimrc` 
+2. add `Bundle 'gmarik/github-search.vim'` to your [Vundle] powered `.vimrc`
 
 ## Howto
 run in [Vim]
 
 `:GHSearchRepo somethin` to search for `somethin`
 
-Pressing `C` over selected repo will clone repo to `~/src/github_user/github_repo`
+Pressing `C` over selected repo will clone repo to `~/src/github_user/github_repo`. To change that path, you can set the `g:github_search_path_format` variable in your vimfiles. There are three placeholders that will be replaced.:
+
+  - `:repo`: the full repo path, like `gmarik/github-search.vim`
+  - `:author`: the author of the repo, in this case `gmarik`
+  - `:project`: the name of the project, `github-search.vim`
+
+So, for example, if you want to clone this repo to `~/projects/github-search.vim`, you can do that with:
+
+    let g:github_search_path_format = '~/projects/:project'
 
 ## Requirements
 

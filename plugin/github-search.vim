@@ -75,10 +75,10 @@ func! GHquery(q)
   let l:from = 'http://github.com/api/v2/json/repos/search/'.l:term
 
   if executable("curl")
-    let cmd = 'curl --fail -s -o '.shellescape(l:to).' '.l:from
+    let cmd = 'curl --fail -s -o '.shellescape(l:to).' '.shellescape(l:from)
   elseif executable("wget")
     let temp = shellescape(tempname())
-    let cmd = 'wget -q -O '.temp.' '.l:from. ' && mv -f '.temp.' '.shellescape(l:to)
+    let cmd = 'wget -q -O '.temp.' '.shellescape(l:from). ' && mv -f '.temp.' '.shellescape(l:to)
     if (has('win32') || has('win64'))
       let cmd = substitute(cmd, 'mv -f ', 'mv /Y ') " change force flag
       let cmd = '"'.cmd.'"'                         " enclose in quotes so && joined cmds work

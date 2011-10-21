@@ -70,8 +70,9 @@ func! GHview(title, headers, results)
 endf
 
 func! GHquery(q)
+  let l:term = substitute(a:q, '[.]', '+', 'g')
   let l:to = tempname()
-  let l:from = 'http://github.com/api/v2/json/repos/search/'.a:q
+  let l:from = 'http://github.com/api/v2/json/repos/search/'.l:term
 
   if executable("curl")
     let cmd = 'curl --fail -s -o '.shellescape(l:to).' '.l:from

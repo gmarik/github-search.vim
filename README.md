@@ -1,46 +1,52 @@
 ##About
 
-[github-search.vim] is a [Vim] plugin to search [Github](http://github.com) with [Vim].
+[github-search.vim] is a [Vim] plugin to search [Github](http://github.com) within [Vim].
 
-here's the result of running `:GHSearchRepo ruby-kata`
+Here's the result of running `:GHSearchRepo ruby-kata`:
 
 ![Github-search.vim](https://lh3.googleusercontent.com/-GtFvhbkYQrg/TpDNt0e30pI/AAAAAAAAHT0/rGkpaxlCkD4/s875/gthub-search.vim.png)
 
-## Why
+## Why?
 
-- A. It's faster than doing it with browser 1) search in browser 2) copy clone url 3) clone in terminal 4) open in Vim
-- B. I prefer Vim to study sources, so I made it easier
+- It's faster than using the browser:
+
+  1. search in browser
+  2. copy/clone the url
+  3. clone in terminal
+  4. open in Vim
+
+- I prefer Vim to study sources, so I made it easier.
 
 ## Installation
 
-If you're [Vundle] user
+If you are a [Vundle] user:
 
 1. run `:BundleInstall gmarik/github-search.vim` within [Vim]
 2. add `Bundle 'gmarik/github-search.vim'` to your [Vundle] powered `.vimrc`
 
-## Howto
-run in [Vim]
+## How-To
+Run in [Vim]
 
-`:GHSearchRepo somethin` to search for `somethin`
+`:GHSearchRepo somethin` to search Github for `somethin`.
 
-Pressing `C` over selected repo will clone repo to `~/src/github_user/github_repo`. To change that path, you can set the `g:github_search_path_format` variable in your vimfiles. There are three placeholders that will be replaced.:
+Pressing `C` over the selected repo will clone the repo to `~/src/github_user/github_repo`. To change the destination path, set the `g:github_search_path_format` variable in your vimfiles. There are three placeholders that will be replaced.:
 
-  - `:repo`: the full repo path, like `gmarik/github-search.vim`
+  - `:repo`: the full Github repo path consisting of author/project, such as `gmarik/github-search.vim`
   - `:author`: the author of the repo, in this case `gmarik`
   - `:project`: the name of the project, `github-search.vim`
 
-So, for example, if you want to clone this repo to `~/projects/github-search.vim`, you can do that with:
+As an example, if you want to clone this repo to `~/projects/github-search.vim`, you can do that by adding the following to your vimfiles:
 
     let g:github_search_path_format = '~/projects/:project'
 
 ## Requirements
 
 - [Curl] - to query github
-- [Git] - to clone
+- [Git] - to clone from Github
 
 ##TODO
 
-- allow specify language
+- allow the user to specify the language for a faceted type of search
 - integrate with [Vundle] to allow search for [Vim plugins]
 
 [github-search.vim]:http://github.com/gmarik/github-search.vim

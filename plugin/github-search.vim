@@ -29,7 +29,7 @@ endf
 
 func! GHfetch(query) abort
   let [true, false, null] = [1,0,"''"]
-  return eval(readfile(GHquery(a:query),'b')[0])
+  return eval(join(readfile(GHquery(a:query))))
 endf
 
 func! GHformat(repo)
